@@ -1,0 +1,635 @@
+body {
+ /* Estilo para el video de fondo */
+.video-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Estilos de la página para que se muestre sobre el video */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos de los botones */
+.botones {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+}
+
+h1 {
+    color: rgb(210, 14, 14);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.importante {
+    font-size: 45px;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+}
+.importante {
+    font-size: 28px;
+    font-style: italic;
+    color: rgb(0, 0, 0); /* Color del texto */
+    text-align: justify;
+    background-color: rgba(48, 140, 244, 0.8); /* Fondo blanco con transparencia de portal informacion */
+    padding: 20px; /* Espacio interno alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados para mejor apariencia */
+    max-width: 850px; /* Limitar el ancho para mejorar legibilidad */
+    margin: 20px auto; /* Centra el párrafo horizontalmente */
+
+}
+h2 {
+    color: lawngreen;
+    font-size: 30px;
+    font-style: normal;
+}
+ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0;
+}
+
+li {
+    margin: 10px 0; /* Espaciado entre los elementos */
+}
+
+a {
+    text-decoration: none; /* Quita el subrayado */
+    color: #007bff; /* Color atractivo (azul) */
+    font-size: 25px; /* Tamaño de fuente adecuado */
+    font-weight: bold;
+    padding: 10px 15px; /* Espaciado interno */
+    display: inline-block; /* Permite agregar un área clickeable */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: rgba(0, 123, 255, 0.1); /* Fondo claro */
+    transition: all 0.3s ease; /* Animación suave */
+}
+
+a:hover {
+    background-color: #007bff; /* Fondo azul más fuerte */
+    color: #fff; /* Texto blanco al pasar el mouse */
+    transform: scale(1.05); /* Pequeño efecto de aumento */
+}
+
+
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #22deaf;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Lista de enlaces */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #0dff00;
+    cursor: pointer;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #b2da32;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.imagenes-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.imagen-delito {
+    position: relative;
+    width: 300px; /*aumenta el tamaño del contenedor*/
+    height: 250px; /*aumenta el tamaño del contenedor*/
+    perspective: 1000px;
+    margin: 40px;
+    text-align: center;
+}
+
+.imagen-frontend,
+.imagen-backend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.imagen-frontend img {
+    width: 100%; /* Hace que la imagen ocupe todo el contenedor */
+    height: 100%; /* Hace que la imagen ocupe todo el contenedor */
+    object-fit:cover; /* Ajusta la imagen para que no se deforme */
+    border-radius: 15px;
+    border: 3px solid #ccc;
+}
+
+.imagen-backend {
+    background-color: #020202;
+    font-size: 25px; /* Ajusta según tu preferencia */
+    color: #c60707;
+    padding: 20px;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 15px; /* Cambia el valor según el grado de redondez deseado */
+}
+
+.imagen-delito:hover > .imagen-frontend {
+    transform: rotateY(180deg);
+}
+
+.imagen-delito:hover > .imagen-backend {
+    transform: rotateY(0deg);
+}
+h1 {
+    color: rgb(251, 251, 251);
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-giratorio {
+    width: 50px; /* Tamaño de la imagen */
+    height: 50px; /* Tamaño de la imagen */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    animation: rotar 5s linear infinite; /* Animación de rotación */
+}
+
+/* Animación de rotación */
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+h1 {
+    color: rgb(251, 251, 251);
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-eje {
+    width: 100px; /* Tamaño de la imagen */
+    height: 100px; /* Tamaño de la imagen */
+    margin: 0 10px; /* Espacio entre la imagen y el texto */
+    animation: rotar-eje 5s linear infinite; /* Animación de rotación sobre el eje Y */
+}
+
+/* Animación de rotación sobre el eje Y */
+@keyframes rotar-eje {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+/* Contenedor del login en la esquina superior derecha */
+.login-container {
+    position: absolute;
+    top: 150px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con ligera transparencia */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el contenedor */
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para los campos de entrada y botón de login */
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    margin: 5px;
+    padding: 3px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    margin: 5px;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007BFF; /* Color azul para el botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el mouse */
+}
+/* Contenedor de denuncias */
+.denuncias-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    max-width: 650px;
+    margin: 20px auto; /* Centramos el formulario en la página */
+    text-align: left;
+}
+
+/* Estilos para el título del formulario */
+.denuncias-container h2 {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los campos de entrada y el área de texto */
+.denuncia-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.denuncia-form input[type="text"],
+.denuncia-form input[type="email"],
+.denuncia-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Estilo para el botón de envío */
+.denuncia-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.denuncia-form button:hover {
+    background-color: #0056b3;
+}
+/* Contenedor de Preguntas Frecuentes */
+.faq-section {
+    background-color: rgba(249, 249, 249, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Título de la sección */
+.faq-section h2 {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo de cada pregunta */
+.faq-question {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo de la respuesta */
+.faq-answer {
+    background-color: #f9f9f9;
+    color: #2c59ea;
+    padding: 15px;
+    margin-top: 5px;
+    border-radius: 5px;
+    display: none; /* Ocultar la respuesta por defecto */
+}
+
+/* Mostrar la respuesta al hacer clic en la pregunta */
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Estilo para la sección de preguntas frecuentes */
+.faq-section {
+    margin: 20px;
+    max-width: 600px;
+}
+
+.faq-question {
+    background-color: #008080;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.faq-question:hover {
+    background-color: #006666;
+}
+
+.faq-answer {
+    background-color: #0aaccc;
+    font-size: 25px; /* Ajusta según tu preferencia */
+    line-height: 1.6; /* Espaciado entre líneas para mayor legibilidad */
+    display: none;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #f5f5f6;
+}
+
+
+/* Estilos específicos para documentos.html */
+body.documentos {
+    background-color: #0940cb;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 5rem;
+    color: #63d9ee;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    margin: 10px 0;
+}
+
+section ul li a {
+    color: #9f0707;
+    text-decoration: none;
+}
+
+section ul li a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+#chatbotWindow {
+    position: fixed;
+    bottom: 90px; /* Justo encima del botón */
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Escondido inicialmente */
+    z-index: 1000;
+}
+
+#chatbotWindow.visible {
+    display: block;
+}
+
+#chatbotBody {
+    padding: 10px;
+    max-height: 350px;
+    overflow-y: auto;
+    background-color: #06a7b0;
+}
+
+.chat-message {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.bot-message {
+    justify-content: flex-start;
+}
+
+.bot-avatar {
+    width: 60px; /* Tamaño único */
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px; /* Espacio entre avatar y texto */
+}
+
+.chat-message span {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    background-color: #f8634c;
+    color: #333;
+}
+
+.user-message span {
+    background-color: #cce5ff;
+    border-radius: 15px 15px 0 15px;
+}
+
+.bot-message span {
+    background-color: #e3ee4a;
+    border-radius: 15px 15px 15px 0;
+}
+
+#chatbotToggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 0px;
+    border-radius: 10%;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1001; /* Asegúrate de que esté por encima de otros elementos */
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#chatbotToggle:hover {
+    background-color: #0b8e9d;
+    transform: scale(1.1); /* Efecto de zoom */
+}
+
+#chatbotInput {
+    display: flex;
+    padding: 10px;
+    background-color: #56f3d8;
+    border-top: 1px solid #ddd;
+}
+
+#userInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#sendButton {
+    padding: 8px 15px;
+    background-color: #078e56;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#sendButton:hover {
+    background-color: #dfb018;
+    transform: translateY(-2px); /* Leve movimiento hacia arriba */
+}
+
+#sendButton:active {
+    background-color: #0aecb4; /* Color más oscuro al presionar */
+    transform: translateY(0); /* Vuelve a su posición */
+}
+
